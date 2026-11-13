@@ -52,7 +52,7 @@ class _MyAppState extends State<MyApp> {
       themeMode: _themeMode,
       
      
-      initialRoute: '/', // pertama kali dibuka hrus Login
+      initialRoute: '/', // ini buat hlaman login dn hlaman slanjutnya
       routes: {
         '/': (context) => const LoginPage(),
         '/profile': (context) => ProfilePage(
