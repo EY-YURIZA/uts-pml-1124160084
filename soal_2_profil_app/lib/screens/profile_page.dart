@@ -28,7 +28,7 @@ class ProfilePage extends StatelessWidget {
         ],
       ),
       
-      // ini buat menu smping 
+      // ini buat menu smping atau sidebar
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -44,7 +44,7 @@ class ProfilePage extends StatelessWidget {
               leading: const Icon(Icons.person),
               title: const Text('Profil'),
               onTap: () {
-                Navigator.pop(context); // ini buat ntup
+                Navigator.pop(context); // ini buat nutup
               },
             ),
             ListTile(
