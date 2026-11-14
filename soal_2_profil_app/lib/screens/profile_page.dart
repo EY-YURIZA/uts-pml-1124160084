@@ -14,14 +14,12 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // buat mnggil data yg ad di model, profil.dart ny
     final profile = Profile.defaultProfile();
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('Profil Mahasiswa'),
         actions: [
-          // ini buat gnti tema ny
           Switch(
             value: isDark,
             onChanged: onThemeChanged,
@@ -29,18 +27,58 @@ class ProfilePage extends StatelessWidget {
           ),
         ],
       ),
+      
+      // ini buat menu smping 
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(color: Colors.blueAccent),
+              child: Text(
+                'Menu Navigasi',
+                style: TextStyle(color: Colors.white, fontSize: 24),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.person),
+              title: const Text('Profil'),
+              onTap: () {
+                Navigator.pop(context); // ini buat ntup
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.info),
+              title: const Text('Tentang Saya'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/about'); // buat ke aboutpage
+              },
+            ),
+          ],
+        ),
+      ),
+      
+     
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Tombol ini belum bisa diklik sebelum kita buat halaman Edit
+          Navigator.pushNamed(context, '/edit'); 
+        },
+        backgroundColor: Colors.blueAccent,
+        foregroundColor: Colors.white,
+        child: const Icon(Icons.edit),
+      ),
+
       body: SingleChildScrollView(
         child: Column(
           children: [
             const SizedBox(height: 32),
-            // buat mnculin foto ny 
             CircleAvatar(
               radius: 60,
               backgroundImage: AssetImage(profile.foto),
             ),
             const SizedBox(height: 16),
-            
-            // Nama dn nim
             Text(
               profile.name,
               style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
@@ -50,16 +88,12 @@ class ProfilePage extends StatelessWidget {
               style: const TextStyle(fontSize: 16, color: Colors.grey),
             ),
             const SizedBox(height: 8),
-            
-            // Prodi dn kelas
             Text(
               '${profile.prodi} | ${profile.kelas}',
               style: const TextStyle(fontSize: 16),
             ),
             const SizedBox(height: 24),
-            
             const Divider(),
-            
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
               child: Align(
@@ -67,8 +101,6 @@ class ProfilePage extends StatelessWidget {
                 child: Text('Informasi Kontak', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
               ),
             ),
-            
-            // ini mnggil widget info_tile ny
             InfoTile(
               icon: Icons.email,
               title: 'Email',
