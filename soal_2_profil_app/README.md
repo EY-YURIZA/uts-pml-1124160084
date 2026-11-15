@@ -1,17 +1,19 @@
-# soal_2_profil_app
+# UTS Pemrograman Aplikasi Mobile - Soal 2
+Aplikasi Profil Mahasiswa menggunakan Flutter (MVC Architecture).
 
-A new Flutter project.
+## 👨‍💻 Identitas Mahasiswa
+- **Nama:** Aditya Ramadhan Khiang
+- **NIM:** 1124160084
+- **Program Studi:** Teknik Informatika - Software Engineering
+- **Kelas:** TI SE 2
+- **Kampus:** Global Institute
 
-## Getting Started
+## ✨ Fitur Aplikasi
+- **Halaman Login:** Dilengkapi dengan validasi form (mencegah form kosong) dan simulasi *loading state*.
+- **Halaman Profil:** Menampilkan data diri statis dari Model dan terintegrasi dengan fitur saklar Tema (*Dark/Light Mode*).
+- **Halaman Edit Profil:** Form pengubahan data dengan validasi ketat (*RegExp* untuk Email & Nomor HP) serta *update state* otomatis ke halaman profil menggunakan `Navigator.pop`.
+- **Halaman Tentang Saya:** Menampilkan riwayat pendidikan dan daftar hobi menggunakan widget `ListView`.
+- **Navigasi Terintegrasi:** Memanfaatkan sistem rute (*Routes*), *Drawer* (Menu Samping), dan *Floating Action Button* (FAB).
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🎬 Video Presentasi
+[Link Vidio: https://youtu.be/kvLaJzJJxpM]
