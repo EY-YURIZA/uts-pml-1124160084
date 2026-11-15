@@ -1,4 +1,4 @@
-# UTS Pemrograman Mobile Lanjut - Soal 2
+# UTS Pemrograman Aplikasi Mobile
 Aplikasi Profil Mahasiswa menggunakan Flutter (MVC Architecture).
 
 ## 👨‍💻 Identitas Mahasiswa
